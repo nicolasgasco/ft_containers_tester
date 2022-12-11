@@ -46,7 +46,7 @@ void test_map_insert_val(long count){
             int val = rand() % M;
 			v1.insert(std::make_pair<std::string, int>(fill, val));
 			v2.insert(ft::make_pair<std::string, int>(fill, val));
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -170,7 +170,7 @@ void test_map_copy_ctor(long count) {
 			++err_count;
 			std::cout << "std size: " << std_res << " ft size : " << ft_res << std::endl;
 		}
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -455,7 +455,7 @@ void test_map_assignment_op(long count) {
 		int ft_res = v2_r.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -524,7 +524,7 @@ void test_map_range_ctor(long count) {
 			++err_count;
 		std::cout << "std size : " << std_res << " ft size : " << ft_res << std::endl; 
 		}
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -699,9 +699,9 @@ void test_map_swap(long count) {
 		v2.swap(v2_r);
 		if (v1.size() != v1_r.size())
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -840,7 +840,7 @@ void test_map_insert_range(long count){
 		v1_r.insert(v1.begin(), v1.end());
 		v2_r.insert(v2.begin(), v2.end());
 
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -966,7 +966,7 @@ void test_map_erase_pos(long count) {
 		v2.erase(v2.begin());
 		if(v1.empty() != v2.empty()) ++err_count;
 		if (v1.size() != v2.size())  ++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();

@@ -45,7 +45,7 @@ void test_set_insert_val(long count){
 			v1.insert(fill);
 			v2.insert(fill);
 
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -163,7 +163,7 @@ void test_set_copy_ctor(long count) {
 		int ft_res = v2_r.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -376,7 +376,7 @@ void test_set_assignment_op(long count) {
 		int ft_res = v2_r.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -442,7 +442,7 @@ void test_set_range_ctor(long count) {
 		int ft_res = v2_r.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -608,9 +608,9 @@ void test_set_swap(long count) {
 		v2.swap(v2_r);
 		if (v1.size() != v1_r.size())
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -744,7 +744,7 @@ void test_set_insert_range(long count){
 			v1.insert(fill);
 			v2.insert(fill);
 
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -866,7 +866,7 @@ void test_set_erase_pos(long count) {
 		v2.erase(v2.begin());
 		if(v1.empty() != v2.empty()) ++err_count;
 		if (v1.size() != v2.size())  ++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();

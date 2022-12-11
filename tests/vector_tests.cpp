@@ -250,7 +250,7 @@ void test_vector_resize(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -312,7 +312,7 @@ void test_vector_reserve(long count){
 		ft_res = v2.capacity();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -364,7 +364,7 @@ void test_vector_push_back(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -424,7 +424,7 @@ void test_vector_pop_back(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -487,7 +487,7 @@ void test_vector_erase_pos(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -550,7 +550,7 @@ void test_vector_erase_iter(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -605,7 +605,7 @@ void test_vector_clear(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -767,7 +767,7 @@ void test_vector_insert_pos(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -827,7 +827,7 @@ void test_vector_insert_pos_num(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -891,7 +891,7 @@ void test_vector_insert_iter(long count){
 		int ft_res = v2.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -988,7 +988,7 @@ void test_vector_assign_range(long count){
 		int ft_res = v2_r.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -1055,7 +1055,7 @@ void test_vector_assign_n(long count){
 #endif
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1.begin(),v1.end(),v2.begin()))
+		if (!ft::equal(v1.begin(),v1.end(),v2.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -1112,7 +1112,7 @@ void test_vector_assignment(long count){
 		int ft_res = v2_r.size();
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -1183,7 +1183,7 @@ void test_vector_copy_ctor(long count){
 #endif
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();
@@ -1252,7 +1252,7 @@ void test_vector_copy_range_ctor(long count){
 #endif
 		if (std_res != ft_res)
 			++err_count;
-		if (!std::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
+		if (!ft::equal(v1_r.begin(),v1_r.end(),v2_r.begin()))
 			++err_count;
 	}
 	double comp_res = timer_stop();

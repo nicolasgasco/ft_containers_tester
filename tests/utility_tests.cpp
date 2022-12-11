@@ -49,7 +49,7 @@ void test_equal_with_pred(long count){
 	for (int i = 0; i < count / 10; ++i){
 		std::random_shuffle(v1.begin(), v1.end());
 		std::random_shuffle(v2.begin(), v2.end());
-		bool std_res = std::equal(v1.begin(), v1.end(),
+		bool std_res = ft::equal(v1.begin(), v1.end(),
                                   v2.begin(), ft_is_first_greater);
 		bool ft_res = ft::equal(v1.begin(), v1.end(),
                                 v2.begin(), ft_is_first_greater);
@@ -62,7 +62,7 @@ void test_equal_with_pred(long count){
 	//std working
 	timer_start();
 	for (int i = 0; i < count; ++i){
-		std::equal(v1.begin(), v1.end(),
+		ft::equal(v1.begin(), v1.end(),
                    v2.begin(), ft_is_first_greater);
 	}
 	double std_res = timer_stop();
@@ -103,7 +103,7 @@ void test_equal(long count){
 	for (int i = 0; i < count / 10; ++i){
 		std::random_shuffle(v1.begin(), v1.end());
 		std::random_shuffle(v2.begin(), v2.end());
-		bool std_res = std::equal(v1.begin(), v1.end(),
+		bool std_res = ft::equal(v1.begin(), v1.end(),
                                   v2.begin());
 		bool ft_res = ft::equal(v1.begin(), v1.end(),
                                 v2.begin());
@@ -116,7 +116,7 @@ void test_equal(long count){
 	//std working
 	timer_start();
 	for (int i = 0; i < count; ++i){
-		std::equal(v1.begin(), v1.end(),
+		ft::equal(v1.begin(), v1.end(),
                    v2.begin());
 	}
 	double std_res = timer_stop();
